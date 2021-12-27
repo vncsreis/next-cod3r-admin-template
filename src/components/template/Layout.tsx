@@ -16,7 +16,7 @@ export function Layout(props: LayoutProps) {
         className={`
         flex
         flex-col
-      bg-gray-300
+      bg-gray-300 dark:bg-gray-800
         w-full
         p-7`}
       >
