@@ -1,10 +1,10 @@
-import { IconeAjustes, IconeInicio, IconeSino } from "../icons";
+import { IconeAjustes, IconeInicio, IconeSair, IconeSino } from "../icons";
 import Logo from "./Logo";
 import { MenuItem } from "./MenuItem";
 
 export function MenuLateral() {
   return (
-    <aside>
+    <aside className="flex flex-col">
       <div
         className={`
           flex flex-col items-center justify-center
@@ -14,10 +14,18 @@ export function MenuLateral() {
       >
         <Logo />
       </div>
-      <ul>
+      <ul className="flex-grow">
         <MenuItem url="/" texto="Início" icone={IconeInicio} />
         <MenuItem url="/ajustes" texto="Ajustes" icone={IconeAjustes} />
         <MenuItem url="/notificacoes" texto="Notificacoes" icone={IconeSino} />
+      </ul>
+      <ul>
+        <MenuItem
+          onClick={() => console.log("Sair")}
+          texto="Sair"
+          icone={IconeSair}
+          className="text-red-600 hover:bg-red-400 hover:text-white"
+        />
       </ul>
     </aside>
   );
