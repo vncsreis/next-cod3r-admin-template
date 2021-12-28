@@ -4,7 +4,13 @@ import { MenuItem } from "./MenuItem";
 
 export function MenuLateral() {
   return (
-    <aside className="flex flex-col">
+    <aside
+      className={`
+      flex flex-col
+      bg-gray-200 
+      dark:bg-gray-900 
+    `}
+    >
       <div
         className={`
           flex flex-col items-center justify-center
@@ -24,7 +30,7 @@ export function MenuLateral() {
           onClick={() => console.log("Sair")}
           texto="Sair"
           icone={IconeSair}
-          className="text-red-600 hover:bg-red-400 hover:text-white"
+          className="text-red-600 dark:text-red-400 dark:hover:text-white hover:bg-red-400 hover:text-white"
         />
       </ul>
     </aside>
